@@ -374,6 +374,13 @@
 				</Property>
 			</Properties>
 		</Object>
+		<Object fullName1="blablabla">
+			<Properties>
+				<Property name="Тип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
 		<Object fullNameInSecondConfiguration="Документ.ЗаказПокупателя.Реквизит.ЦеныИзменены">
 			<MergeRule>DoNotMerge</MergeRule>
 		</Object>
