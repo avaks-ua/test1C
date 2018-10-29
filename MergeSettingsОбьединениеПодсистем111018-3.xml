@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.3/config/merge/settings" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" platformVersion="8.3.11">
+	<MainConfiguration>
+		<Name>УправлениеНебольшойФирмойДляУкраины</Name>
+		<Version>1.6.6.1</Version>
+		<Vendor>Molenari OU</Vendor>
+	</MainConfiguration>
+	<SecondConfiguration>
+		<Name>УправлениеНебольшойФирмойДляУкраины</Name>
+		<Version>1.6.6.1</Version>
+		<Vendor>Molenari OU</Vendor>
+	</SecondConfiguration>
+	<Parameters>
+		<ConfigurationsRelation>ConfigurationsNotRelated</ConfigurationsRelation>
+		<AllowMainConfigurationObjectDeletion>false</AllowMainConfigurationObjectDeletion>
+		<CopyObjectsMode>false</CopyObjectsMode>
+	</Parameters>
+	<Objects>
+		<Object fullName="Документ.ЗаказПокупателя.Форма.ФормаСписка">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<FormModule>
+						<MergeRule>GetFromSecondConfiguration</MergeRule>
+						<Module>
+							<Methods>
+								<VariableDeclarationArea>
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</VariableDeclarationArea>
+								<Method name="ОбновитьСообщенияНаСервере">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+									<Patch>@@ -1,1 +1,45 @@
+ 
++&amp;НаСервере
++Функция ОбновитьСообщенияНаСервере(ПослДата)
++	Запрос = Новый Запрос;
++	Запрос.Текст = 
++		"ВЫБРАТЬ
++		|	ВходящаяЦена.ДокументРегистратор КАК ДокументРегистратор,
++		|	ВходящаяЦена.Номенклатура КАК Номенклатура,
++		|	ВходящаяЦена.ЦенаВх КАК ЦенаВх,
++		|	ВходящаяЦена.КурсЗакупки КАК КурсЗакупки,
++		|	ВходящаяЦена.Дата КАК Дата,
++		|	ВходящаяЦена.ФлагУстановки КАК ФлагУстановки,
++		|	ВходящаяЦена.Примечание КАК Примечание
++		|ИЗ
++		|	РегистрСведений.ВходящаяЦена КАК ВходящаяЦена
++		|ГДЕ
++		|	ВходящаяЦена.Дата &gt; &amp;ДатаЗапроса
++		|	И ВходящаяЦена.ФлагУстановки = &amp;ФлУстановки
++		|	И ВходящаяЦена.ДокументРегистратор.Автор = &amp;Автор";
++	
++	Запрос.УстановитьПараметр("ДатаЗапроса", ПослДата);
++	Запрос.УстановитьПараметр("ФлУстановки", Истина);
++	Запрос.УстановитьПараметр("Автор", Пользователи.ТекущийПользователь());
++	
++	РезультатЗапроса = Запрос.Выполнить();
++	
++	ВыборкаДетальныеЗаписи = РезультатЗапроса.Выбрать();
++	МассивДанных = Новый Массив;
++	
++	Пока ВыборкаДетальныеЗаписи.Следующий() Цикл
++		Стр = Новый Структура;  //("Дата, ДокументРегистратор, КурсЗакупки, Номенклатура, ФлагУстановки, ЦенаВх");
++		Стр.Вставить("Дата",ВыборкаДетальныеЗаписи.дата);
++		Стр.Вставить("ДокументРегистратор",ВыборкаДетальныеЗаписи.ДокументРегистратор);
++		Стр.Вставить("КурсЗакупки",ВыборкаДетальныеЗаписи.КурсЗакупки);
++		Стр.Вставить("Номенклатура",ВыборкаДетальныеЗаписи.Номенклатура);
++		Стр.Вставить("ЦенаВх",ВыборкаДетальныеЗаписи.ЦенаВх);
++		Стр.Вставить("Примечание",ВыборкаДетальныеЗаписи.Примечание);
++		
++		//ЗаполнитьЗначенияСвойств(Стр,ВыборкаДетальныеЗаписи);
++		МассивДанных.Добавить(Стр);
++
++	КонецЦикла;
++	Возврат(МассивДанных);
++	
++Конецфункции
+</Patch>
+								</Method>
+								<Method name="ОбновитьПанельКонтактнойИнформацииСервер">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ОбновитьСообщения">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+									<Patch>@@ -1,1 +1,13 @@
+ 
++&amp;НаКлиенте
++Процедура ОбновитьСообщения() Экспорт
++    СписокСообщений = ОбновитьСообщенияНаСервере(ДатаПоследнегоСообщения);    
++    //Оповещение = Новый ОписаниеОповещения("ОбработатьНажатие", ЭтотОбъект);
++	Для каждого Строка Из СписокСообщений Цикл
++		//Сообщить("Можно получить цену для номенклатуры - " +Строка.номенклатура + " документ - " + Строка.ДокументРегистратор);
++		Оповещение = Новый ОписаниеОповещения("ОбработатьНажатие", ЭтотОбъект,Строка.ДокументРегистратор );
++		ПоказатьОповещениеПользователя ("номенклатура - " + Строка.номенклатура + " цена - " + Строка(Строка.ЦенаВх) + " документ - " + Строка.ДокументРегистратор + "  " + Строка.Примечание,Оповещение,,,СтатусОповещенияПользователя.Важное,);
++		ДатаПоследнегоСообщения = Строка.Дата;
++	КонецЦикла;
++	
++КонецПроцедуры
+</Patch>
+								</Method>
+								<Method name="ОбработатьАктивизациюСтрокиСписка">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ОбработатьНажатие">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+									<Patch>@@ -1,1 +1,7 @@
+ 
++&amp;НаКлиенте
++Процедура ОбработатьНажатие(Док) Экспорт
++	
++	Форма = Док.ПолучитьФорму("ФормаДокумента",Док);
++	Форма.открыть();
++КонецПроцедуры
+</Patch>
+								</Method>
+								<Method name="ОбработкаОповещения">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ОтборВидЗаказаОбработкаВыбора">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ОтборЗавершениеЗаказаОбработкаВыбора">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ОтборКонтрагентОбработкаВыбора">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ОтборОплатаОбработкаВыбора">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ОтборОрганизацияОбработкаВыбора">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ОтборОтветственныйОбработкаВыбора">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ОтборОтгрузкаОбработкаВыбора">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ОтборСостояниеАвтоПодбор">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ОтборСостояниеНачалоВыбора">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ОтборСостояниеОбработкаВыбора">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ОткрытьШаблоныПечатиДоговоровКонтрагентов">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ОткрытьШаблоныПечатиКоммерческихПредложений">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ПередатьВЯндексДоставку">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="Подключаемый_ВыполнитьКоманду">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="Подключаемый_ВыполнитьКомандуНаСервере">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="Подключаемый_ВыполнитьКомандуЭДО">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="Подключаемый_ДанныеПанелиКонтактнойИнформацииВыбор">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="Подключаемый_ДанныеПанелиКонтактнойИнформацииВыполнитьКоманду">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="Подключаемый_ДанныеПанелиКонтактнойИнформацииПриАктивизацииСтроки">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="Подключаемый_МеткаОбработкаНавигационнойСсылки">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="Подключаемый_ОбновитьКоманды">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="Подключаемый_ОбработчикОжиданияЭДО">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="Подключаемый_ПоказатьНовостиТребующиеПрочтенияПриОткрытии">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ПредставлениеПериодаНажатие">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ПриЗакрытии">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="ПриОткрытии">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+									<Patch>@@ -9,5 +9,9 @@
+ 	// ЭДО
+ 	ОбменСКонтрагентамиКлиент.ПриОткрытии(ЭтотОбъект);
+ 	// Конец ЭДО
++	//---lvl---
++	ДатаПоследнегоСообщения = ТекущаяДата();
++	ПодключитьОбработчикОжидания("ОбновитьСообщения", 10);
++	//---lvl---
+ 	
+ КонецПроцедуры
+</Patch>
+								</Method>
+								<Method name="ПриСозданииНаСервере">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="СвернутьРазвернутьПанельОтборов">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="СоздатьПоШаблону">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="СохранитьНастройкиОтборов">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="СписокПередНачаломДобавления">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="СписокПередНачаломИзменения">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="СписокПриАктивизацииСтроки">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="УдалитьМеткуОтбора">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="УстановитьМеткуИОтборСписка">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="УстановитьОтборТекущиеДела">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<Method name="УстановитьУсловноеОформлениеПоЦветамСостоянийСервер">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</Method>
+								<DirectiveArea name="ПеременныеФормы">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</DirectiveArea>
+								<DirectiveArea name="ОбработчикиСобытийФормы">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</DirectiveArea>
+								<DirectiveArea name="ОбработчикиСобытийЭлементовФормы">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</DirectiveArea>
+								<DirectiveArea name="ОбработчикиКомандФормы">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</DirectiveArea>
+								<DirectiveArea name="МеткиОтборов">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</DirectiveArea>
+								<DirectiveArea name="ПанельКонтактнойИнформации">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</DirectiveArea>
+								<DirectiveArea name="СлужебныеПроцедурыИФункции">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+								</DirectiveArea>
+								<DirectiveArea name="ОбработчикиБиблиотек">
+									<MergeRule>GetFromSecondConfiguration</MergeRule>
+									<Patch>@@ -1,4 +1,5 @@
+ 
+ #Область ОбработчикиБиблиотек
+ 
++
+ #КонецОбласти
+</Patch>
+								</DirectiveArea>
+							</Methods>
+						</Module>
+					</FormModule>
+				</Property>
+			</Properties>
+		</Object>
+	</Objects>
+</Settings>

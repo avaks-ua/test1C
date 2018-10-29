@@ -1,0 +1,3523 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.3/config/merge/settings" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" platformVersion="8.3.11">
+	<MainConfiguration>
+		<Name>УправлениеНебольшойФирмойДляУкраины</Name>
+		<Version>1.6.6.1</Version>
+		<Vendor>Molenari OU</Vendor>
+	</MainConfiguration>
+	<SecondConfiguration>
+		<Name>УправлениеНебольшойФирмойДляУкраины</Name>
+		<Version>1.6.6.1</Version>
+		<Vendor>Molenari OU</Vendor>
+	</SecondConfiguration>
+	<Parameters>
+		<ConfigurationsRelation>ConfigurationsNotRelated</ConfigurationsRelation>
+		<AllowMainConfigurationObjectDeletion>false</AllowMainConfigurationObjectDeletion>
+		<CopyObjectsMode>false</CopyObjectsMode>
+	</Parameters>
+	<Objects>
+		<Object fullName="Подсистема.CRM">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.МассоваяРассылка">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьЧатВОбсуждениях">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.ВводЦен">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Обработка.ДокументыПоКонтрагенту">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.МониторЛогиста">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Обработка.ПриемСообщений">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Обработка.РасчетПотребностей1">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.РегистрацияВСистемеВзаимодействияУНФ">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКартинка.КоллекцияСобытий">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКартинка.РазделCRM">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКартинка.СостоянияВключеноВыключено">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.БольшеВозможностейCRM">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.ОткрытьПанельСпаркРиски">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.ОткрытьШаблоныСообщений">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.СобытияМониторингаСПАРКРиски">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВариантыВажности">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗаказыПокупателей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.АнализЦенВх">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НастройкиВидовКонтактнойИнформации">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ОстаткиВзаиморасчетов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ИсточникиПривлеченияПокупателей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.КонтактныеЛица">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.НоменклатураБухгалтерии">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПравилаРабочегоПроцесса">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.Сегменты">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ШаблоныПечатиОфисныхДокументов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.CRM.Подсистема.События">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.Событие">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.РасчетПотребностей1">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.CRM.Подсистема.ТоварыИУслуги">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.РасчетПотребностей1">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.ПрайсЛисты">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.АнализЦенВх">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ОтветыЛогиста">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.Номенклатура">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.ЗапасыИЗакупки">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.Событие">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.ВыгрузкаБазыТоваровВТСД">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.Панель1СМаркировка">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.ПанельАдминистрирования1СМаркировка">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.ПомощникКорректировкиОстатковЕГАИС">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.РасчетПотребностей1">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.СопоставлениеНоменклатурыЕГАИС">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.СопоставлениеОрганизацийЕГАИС">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.БольшеВозможностейЗакупки">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.ДополнительныеОбработкиЗапасыИЗакупки">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.ПолучитьОтветыЕГАИС">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.АнализЦенВх">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.НоменклатураБухгалтерии">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.ЗапасыИЗакупки.Подсистема.РасчетыСПоставщиками">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.Взаимозачет">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.СверкаВзаиморасчетов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.РасчетПотребностей1">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.ЗапасыИЗакупки.Подсистема.ЗапасыИСклад">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ИнвентаризацияЗапасов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.ОприходованиеЗапасов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.ПеремещениеЗапасов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.ПеремещениеПоЯчейкам">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.ПересортицаЗапасов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.ПриходныйОрдер">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.РасходныйОрдер">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.РезервированиеЗапасов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.СписаниеЗапасов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ЖурналДокументов.ДокументыПоЗапасам">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ЖурналДокументов.ДокументыПоСкладу">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ЖурналДокументов.СкладскиеАкты">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ЖурналДокументов.СкладскиеОрдера">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.РасчетПотребностей1">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="ОбщийМодуль.РозницаОтрицательныеОстаткиВызовСервера">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.АнализДоступности">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.ВедомостьПоТоварамНаСкладахВЦенахНоменклатуры">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.Запасы">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.ЗапасыПереданные">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.ЗапасыПринятые">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.ИзлишкиИНедостачи">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.ОборачиваемостьЗапасов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.РазмещениеЗаказов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.Склад">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.ЗапасыИЗакупки.Подсистема.ТорговыеПредложения">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="ОбщаяКоманда.ТорговыеПредложения1СБизнесСеть">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ВходящаяЦена">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.ЗапасыИЗакупки.Подсистема.ТоварыИУслуги">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.РасчетПотребностей1">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.Номенклатура">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.НомераГТД">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.ЗапасыИЗакупки.Подсистема.Цены">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Обработка.ПрайсЛистыКонтрагентов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыЦенКонтрагентов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.Компания.Подсистема.Компания">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.ОткрытьМенюФункцийНСИ">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ПланСчетов.Управленческий">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.БанковскиеСчета">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.Организации">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.Сотрудники">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.СтруктурныеЕдиницы">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.МаркетингИПродажи">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗаказНаПроизводство">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.ПеремещениеЗапасов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.Событие">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.ПечатьЭтикетокИЦенников">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.БольшеВозможностейПродажи">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.ДополнительныеОбработкиМаркетингИПродажи">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.Теги">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ХранилищеШаблонов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ШаблоныЭтикетокИЦенников">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.МаркетингИПродажи.Подсистема.Продажи">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.АктВыполненныхРабот">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.ЗаказПокупателя">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.КорректировкаРеализации">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.НалоговаяНакладная">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.ОтчетКомиссионера">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.ПриемИПередачаВРемонт">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.Приложение1КНалоговойНакладной">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.Приложение2КНалоговойНакладной">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.ПриходнаяНакладная">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.РасходнаяНакладная">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.СчетНаОплату">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ЖурналДокументов.ДокументыПоПродажам">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.ПечатьТН">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.ПечатьТТН">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.ПечатьУКД">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.АнализБазыКонтрагентов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.АнализДоступности">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.АнализЗаказаПокупателя">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.АнализЗаказовПокупателей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.ЗаказыПокупателей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.КалендарьСобытий">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.КонтрольЗаполненияКонтактнойИнформации">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.РазмещениеЗаказов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.СводныйАнализЗаказовПокупателей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ОтветыЛогиста">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Контрагенты">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.Проекты">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.СостоянияЗаказовПокупателей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.МаркетингИПродажи.Подсистема.Маркетинг">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.ВидыСкидокНаценокРучныеИАвтоматические">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.ДисконтныеКарты">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.Ценообразование">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.ПрайсЛисты">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.АвтоматическиеСкидки">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыДисконтныхКарт">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыСкидокНаценок">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыЦен">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ДисконтныеКарты">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПрайсЛисты">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.УсловияПредоставленияСкидокНаценок">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЦеновыеГруппы">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.МаркетингИПродажи.Подсистема.ТоварыИУслуги">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ОтветыЛогиста">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Номенклатура">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.НомераГТД">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.НСИ">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="ЖурналДокументов.ДокументыПланированияРесурсов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ЖурналДокументов.ДокументыПоступленияДенег">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ЖурналДокументов.ДокументыРасходаДенег">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.АрхивироватьЧекиККМПриЗакрытииКассовойСмены">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ВалютаУчета">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ВестиСведенияДляДекларацийПоАлкогольнойПродукции">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ДатаОбновленияНаРелиз_1_2_1">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ДатаОбновленияНаРелиз_1_4_1">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ДатаОбновленияНаРелиз_1_6_6">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ЗачитыватьАвансыДолгиАвтоматически">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьГруппыДоступаКонтрагентов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьКорректировкиПоступлений">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьКорректировкиРеализаций">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.Компания">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.КонтролироватьОстаткиПоНомерамГТД">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.КонтролироватьОстаткиПриПробитииЧековККМ">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.КонтролироватьОстаткиПриПроведении">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.НациональнаяВалюта">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ПервоначальнаяНастройкаЗаполненыНачальныеОстатки">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ПервоначальнаяНастройкаЗаполненыСведенияОбОрганизации">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ПереноситьДатуЗапретаРедактирования">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ПлановаяДатаОптимизацииИтогов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ПрайсЛистВыводитьКод">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ПрайсЛистВыводитьПолноеНаименование">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ПрайсЛистФормироватьПоНаличиюНаСкладах">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.СрокОплатыПокупателя">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.СрокОплатыПоставщику">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьАртикулНоменклатурыВСодержание">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьИспользоватьСостоянияЗаказовНаПроизводство">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьИспользоватьСостоянияЗаказовПокупателей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьИспользоватьСостоянияЗаказовПоставщикам">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьСостояниеВРаботеЗаказовНаПроизводство">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьСостояниеВРаботеЗаказовПокупателей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьСостояниеВРаботеЗаказовПоставщикам">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьСостояниеВыполненЗаказовНаПроизводство">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьСостояниеВыполненЗаказовПокупателей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьСостояниеВыполненЗаказовПоставщикам">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалятьНепробитыеЧекиПриЗакрытииКассовойСмены">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.УчетПоКомпании">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияВестиУчетНалогаНаДоходыИВзносов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияВестиШтатноеРасписание">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьБюджетирование">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьКорректировкиДолга">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьНаборы">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьОрдерныйСклад">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьПартии">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьПечатьЭтикетокИЦенников">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьПланПродаж">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьПодключаемоеОборудование">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьПодсистемуЗарплата">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьПодсистемуПроизводство">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьПодсистемуРаботы">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьРучныеСкидкиНаценкиПродажи">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьСверкиВзаиморасчетов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьСервисЗакупкаТоваров">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьСервисРасчетПотребностей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьСовместительство">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьТехоперации">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьХарактеристики">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияКассовыйМетодУчетаДоходовИРасходов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПередачаЗапасовНаОтветхранение">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПередачаСырьяВПереработку">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПередачаТоваровНаКомиссию">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПереработкаДавальческогоСырья">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПланироватьЗагрузкуРесурсовПредприятия">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПлатежныйКалендарь">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПриемЗапасовНаОтветхранение">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПриемТоваровНаКомиссию">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияРезервированиеЗапасов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетВРазличныхЕдиницахИзмерения">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетВнеоборотныхАктивов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетПоНесколькимНаправлениямДеятельности">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетПоНесколькимОрганизациям">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетПоНесколькимПодразделениям">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетПоНесколькимСкладам">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетПоПроектам">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетПоЯчейкам">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетРозничныхПродаж">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяУчетВалютныхОпераций">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.ЗакрытиеМесяца">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.МенеджерПодсказок">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.ДвиженияДокумента">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.БазыРаспределенияРасходов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВариантыВыводаМесяцаВДатеДокумента">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВариантыУказанияКодПоЕДРПОУ">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыДеятельностиОрганизации">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыДоговоров">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыЛицензийАлкогольнойПродукции">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийВзаимозачет">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийЗаданиеНаРаботу">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийЗаказНаПроизводство">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийЗаказПокупателя">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийЗаказПоставщику">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийИсправленияПоступленияРеализации">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийКадровоеПеремещение">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийНалоговаяНакладная">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийНачислениеНалогов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийПеремещениеЗапасов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийПеремещениеПоЯчейкам">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийПлатежнаяВедомость">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийПлатежноеПоручение">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийПоступлениеВКассу">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийПоступлениеНаСчет">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийПриходнаяНакладная">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийРасходИзКассы">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийРасходСоСчета">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийРасходнаяНакладная">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыОперацийСборкаЗапасов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыПеречисленийВБюджет">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВидыТранспортныхСредств">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВходящееИсходящееСобытие">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ДаНет">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ДебетКредит">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ДниНедели">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.МетодОценкиЗапасов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.Периодичность">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ПоложениеРеквизитаНаФорме">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ПорядкиОкругления">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.СистемыНалогообложения">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.СостоянияВнеоборотныхАктивов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.СпособВыводаОстатковВПодборе">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.СпособВыводаОтчета">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.СпособыВводаДанныхОВремени">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.СпособыНачисленияАмортизацииВнеоборотныхАктивов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.СпособыПополненияЗапасов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.СпособыРасчетаКомиссионногоВознаграждения">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.СтатусыОтчетаОРозничныхПродажах">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.СтатусыПартий">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.СтатусыПланируемыхПлатежей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.СтатусыСверокВзаиморасчетов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.СтатусыУтвержденияПлатежей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.СтатусыЧековККМ">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыВнеоборотныхАктивов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыГраницПериода">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыГрафикаРаботы">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыДвиженийЗапасов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыДенежныхСредств">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыЗанятости">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыИнформационныхБаз">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыКассККМ">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыНалогообложенияНДС">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыНачисленийИУдержаний">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыНоменклатуры">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыПриемаПередачиТоваров">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыРасчетов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыРесурсов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыСобытий">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыСтрокСоставаСпецификации">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыСтруктурныхЕдиниц">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ТипыСчетов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.УдалитьСтатусыЗаказов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.УдалитьТипыОтветственныхЛиц">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ЮридическоеФизическоеЛицо">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ПланВидовХарактеристик.НастройкиПользователей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрБухгалтерии.Управленческий">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ВнеоборотныеАктивы">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ВыпускПродукции">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ВыработкаВнеоборотныхАктивов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ГрафикДвиженияЗапасов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДенежныеСредства">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДенежныеСредстваВКассахККМ">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДенежныеСредстваПрогноз">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДоходыИРасходы">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДоходыИРасходыКассовыйМетод">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДоходыИРасходыНераспределенные">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДоходыИРасходыОтложенные">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДоходыИРасходыПрогноз">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗаданияНаРаботу">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗаказыНаПроизводство">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗаказыПокупателей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗаказыПоставщикам">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.Закупки">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.Запасы">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗапасыКПоступлениюНаСклады">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗапасыКРасходуСоСкладов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗапасыНаСкладах">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗапасыПереданные">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗапасыПринятые">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.НачисленияИУдержания">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ОплатаСчетовИЗаказов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ПланыПродаж">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ПлатежныйКалендарь">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ПотребностьВЗапасах">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.Продажи">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РазмещениеЗаказов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РасчетыПоНалогам">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РасчетыСПерсоналом">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РасчетыСПодотчетниками">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РасчетыСПокупателями">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РасчетыСПоставщиками">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.СдельныеНаряды">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.СуммовойУчетВРознице">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.Табель">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ФинансовыйРезультат">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ФинансовыйРезультатПрогноз">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.АналогиНоменклатуры">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ВидыРесурсовПредприятия">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ГрафикВыполненияЗаказов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ГрафикОплатыЗаказов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ГрафикПлатежей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ГрафикиРаботы">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ГрафикиРаботыРесурсов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НастройкиПользователей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НоменклатураКонтрагентов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НормыВремениРабот">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ОтклоненияОтГрафиковРаботыРесурсов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ОшибкиЗакрытияМесяца">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПараметрыВнеоборотныхАктивов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПлановыеНачисленияИУдержания">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПодчиненныеПользователи">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПримененияЕНВД">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СистемыНалогообложенияОрганизаций">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СоставНаборов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СостоянияВнеоборотныхАктивов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.Сотрудники">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СотрудникиПользователя">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.УдалитьОтветственныеЛица">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.УзлыКорректировкиСтоимостиСписания">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.УправлениеЗапасами">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ФИОФизЛиц">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ФактОплатыЗаказов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ЦеныНоменклатуры">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ЦеныНоменклатурыКонтрагентов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ШтрихкодыНоменклатуры">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.Банки">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.БанковскиеСчета">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.Валюты">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыАлкогольнойПродукции">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыРесурсовПредприятия">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ГруппыДоступаКонтрагентов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ДоговорыКонтрагентов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ДополнительныеУсловия">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЕдиницыИзмерения">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.КонтактныеЛица">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЛицензииПоставщиковАлкогольнойПродукции">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЛицензионныеКарточкиТранспортныхСредств">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.НоменклатураБухгалтерии">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПартииНоменклатуры">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.РолиКонтактныхЛиц">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.СерийныеНомера">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.СостоянияСобытий">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.Спецификации">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ТемыСобытий">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ТранспортныеСредства">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ХарактеристикиНоменклатуры">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ХозяйственныеОперации">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ШаблоныСерийныхНомеров">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.Ячейки">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="ОбщийМодуль.ГрупповоеИзменениеСтрокКлиент">
+			<Properties>
+				<Property name="Модуль">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="ОбщийМодуль.ГрупповоеИзменениеСтрокКлиентСервер">
+			<Properties>
+				<Property name="Модуль">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="ОбщийМодуль.ГрупповоеИзменениеСтрокСервер">
+			<Properties>
+				<Property name="Модуль">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="ПланОбмена.АвтономнаяРабота">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.АвансовыйОтчет">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.АктВыполненныхРабот">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.АмортизацияВА">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.Бюджет">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ВводНачальныхОстатков">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.Взаимозачет">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ВыгрузкаРегламентированныхОтчетов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ВыработкаВА">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.Доверенность">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ДоговорКредитаИЗайма">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ДополнительныеРасходы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ЗаданиеНаРаботу">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ЗаказНаПроизводство">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ЗаказПокупателя">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ЗаказПоставщику">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ЗакрытиеМесяца">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ЗаписиПатент">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ЗаписиУСН">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ИзменениеПараметровВА">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ИнвентаризацияЗапасов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.КадровоеПеремещение">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.КассоваяСмена">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.КорректировкаПоступления">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.КорректировкаРеализации">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.КорректировкаРегистров">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.МаршрутныйЛист">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.МассоваяРассылка">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.НачислениеЗарплаты">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.НачислениеНалогов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.НачисленияПоКредитамИЗаймам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.Операция">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ОперацияПоПлатежнымКартам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ОписьПачекСЗВ_6">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ОприходованиеЗапасов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ОтзывСогласияНаОбработкуПерсональныхДанных">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ОтчетКомиссионера">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ОтчетКомитенту">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ОтчетОПереработке">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ОтчетОРозничныхПродажах">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ОтчетПереработчика">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПачкаДокументовСЗВ_6_3">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПачкаДокументовСЗВ_6_4">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПачкаРазделов6РасчетаРСВ_1">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПередачаВА">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПеремещениеДС">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПеремещениеДСПлан">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПеремещениеЗапасов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПеремещениеПоЯчейкам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПереоценкаВРозницеСуммовойУчет">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПересортицаЗапасов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПланПродаж">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПлатежнаяВедомость">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПлатежноеПоручение">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПоказателиЕНВД">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПоступлениеВКассу">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПоступлениеДСПлан">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПоступлениеНаСчет">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПоясненияКДекларацииПоНДС">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПриемИПередачаВРемонт">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПриемНаРаботу">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПринятиеКУчетуВА">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПриходнаяНакладная">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПриходныйОрдер">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ПрочиеРасходы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.РаспределениеЗатрат">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.РасходДСПлан">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.РасходИзКассы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.РасходСоСчета">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.РасходнаяНакладная">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.РасходныйОрдер">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.РегламентированныйОтчет">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.РеестрСЗВ_6_2">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.РезервированиеЗапасов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.СборкаЗапасов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.СверкаВзаиморасчетов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.СдельныйНаряд">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.Событие">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.СогласиеНаОбработкуПерсональныхДанных">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.СообщениеОбменСБанками">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.СписаниеВА">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.СписаниеЗапасов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.СправкиНДФЛДляПередачиВНалоговыйОрган">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.СчетНаОплату">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.СчетНаОплатуПоставщика">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.Табель">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.УведомлениеОСпецрежимахНалогообложения">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.Увольнение">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.УчетВремени">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ЧекККМ">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.ЧекККМВозврат">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.АдресДляВосстановленияПароляУчетнойЗаписи">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.АрхивироватьЧекиККМПриЗакрытииКассовойСмены">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.БиллингВестиУчетРасходовПоДоговорамОбслуживания">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.БиллингГоловноеНаправлениеДеятельности">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ВалютаУчета">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ВариантыСовместногоПримененияСкидокНаценок">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ВестиРасчетыПоДоговорам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ВестиРасчетыПоДокументам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ВестиРасчетыПоЗаказам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ВестиСведенияДляДекларацийПоАлкогольнойПродукции">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ВестиУчетОплатыПоСчетам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ВидБизнесаОрганизации">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ВыгружатьПродажиНемаркируемойПродукцииВЕГАИС">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ДатаНачалаРегистрацииРозничныхПродажВЕГАИС">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ДатаОбновленияНаРелиз_1_6_6">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ДатаПервогоВходаВСистему">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ЕстьАвтоматическиеСкидки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ЗаголовокСистемы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ЗачитыватьАвансыДолгиАвтоматически">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьБиллинг">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьВерсионированиеОбъектов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьВидыЗаказНарядов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьВидыЗаказовПокупателей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьВнешнихПользователей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьВнутреннийСервисТарификации">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьГруппыДоступаКонтрагентов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьГруппыПользователей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьДатыЗапретаЗагрузки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьДатыЗапретаИзменения">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьДополнительныеОтчетыИОбработки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьДополнительныеРеквизитыИСведения">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьКорректировкиПоступлений">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьКорректировкиРеализаций">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьМобильнуюТелефонию">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьНесколькоВариантовКП">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьНесколькоОрганизаций">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьОблачнуюТелефонию">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьОбменБизнесСеть">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьОбменСБанками">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьОбменСПодключаемымОборудованиемOffline">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьОбщиеДополнительныеЗначения">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьОбщиеДополнительныеРеквизитыИСведения">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьОнлайнПоддержку">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьПолнотекстовыйПоиск">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьПроверкуКонтрагентов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьРемонты">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьСерийныеНомера">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьСертификатыОблачногоСервисаВЭДО">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьТестовыйРежимDirectBank">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьУдалениеПомеченныхОбъектов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьШифрование">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьЭлектроннуюПочтуВШаблонахСообщений">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьЭлектронныеПодписи">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользуемаяАТС">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.Компания">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.КонтролироватьОстаткиПоНомерамГТД">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.КонтролироватьОстаткиПриПробитииЧековККМ">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.КонтролироватьОстаткиПриПроведении">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.КонтрольОстатковСерийныхНомеров">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.НастройкиПодчиненногоУзлаРИБ">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.НастройкиТелефонии">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.НациональнаяВалюта">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.НачалоИспользованияСФ981">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.НеИспользоватьНесколькоОрганизаций">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.НеПроводитьДокументыСНекорректнымиДоговорами">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ОграничиватьДоступНаУровнеЗаписей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ОтложенноеОбновлениеВГлавномУзлеЗавершеноУспешно">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ОтложенноеОбновлениеЗавершеноУспешно">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ПервоначальнаяНастройкаЗаполненыНачальныеОстатки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ПервоначальнаяНастройкаЗаполненыСведенияОбОрганизации">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ПлановаяДатаОптимизацииИтогов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ПрайсЛистВыводитьКод">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ПрайсЛистВыводитьПолноеНаименование">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ПрайсЛистИспользоватьИерархиюНоменклатуры">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ПрайсЛистФормироватьПоНаличиюНаСкладах">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ПредельноеКоличествоЗаписейВРазделеДекларацииПоНДС">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ПредложитьЗаполнитьПоставляемыеШаблоныДоговоровКонтрагентов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ПредложитьЗаполнитьПоставляемыеШаблоныКоммерческогоПредложения">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ПрефиксДляОбменаССайтом">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.СведенияОБлокируемыхОбъектах">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.СведенияОбОбновленииИБ">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.СинхронизироватьФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.СписокЗапрещенныхРасширений">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.СписокЗапрещенныхРасширенийОбластиДанных">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.СписокРасширенийТекстовыхФайлов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.СписокРасширенийФайловOpenDocument">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.СписокРасширенийФайловOpenDocumentОбластиДанных">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.СрокОплатыПокупателя">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.СрокОплатыПоставщику">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьАртикулНоменклатурыВСодержание">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьИспользоватьРабочиеПроцессы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьИспользоватьСостоянияЗаказовНаПроизводство">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьИспользоватьСостоянияЗаказовПокупателей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьИспользоватьСостоянияЗаказовПоставщикам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьСостояниеВРаботеЗаказовНаПроизводство">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьСостояниеВРаботеЗаказовПокупателей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьСостояниеВРаботеЗаказовПоставщикам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьСостояниеВыполненЗаказовНаПроизводство">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьСостояниеВыполненЗаказовПокупателей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьСостояниеВыполненЗаказовПоставщикам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалитьФункциональнаяОпцияИспользоватьМассовыеРассылки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.УдалятьНепробитыеЧекиПриЗакрытииКассовойСмены">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.УчетПоКомпании">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияВестиУчетНалогаНаДоходыИВзносов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияВестиУчетРасчетовСБанкомЭквайрером">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияВестиШтатноеРасписание">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьАвтоматическиеСкидкиНаценки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьБюджетирование">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьДисконтныеКарты">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьЗаказыВРозничнойТорговле">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьЗаказыВРозничнойТорговлеДляНастроек">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьКорректировкиДолга">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьОбменССайтами">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьОплатуКартами">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьОплатуКартамиВОптовойТорговле">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьОрдерныйСклад">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьОтчетность">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьПартии">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьПечатьЭтикетокИЦенников">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьПланПродаж">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьПодключаемоеОборудование">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьПодсистемуЗарплата">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьПодсистемуПроизводство">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьПодсистемуРаботы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьРучныеСкидкиНаценкиЗакупки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьРучныеСкидкиНаценкиПродажи">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьСверкиВзаиморасчетов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьСервисЗакупкаТоваров">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьСервисРасчетПотребностей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьСовместительство">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьСтатьиДвиженияДенежныхСредств">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьТехоперации">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользоватьХарактеристики">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияИспользуетсяОСНО">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияКассовыйМетодУчетаДоходовИРасходов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияКредитыИЗаймы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияОпросНалоги">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПередачаЗапасовНаОтветхранение">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПередачаСырьяВПереработку">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПередачаТоваровНаКомиссию">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПереработкаДавальческогоСырья">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПланироватьЗагрузкуРесурсовПредприятия">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПлатежныйКалендарь">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПриемЗапасовНаОтветхранение">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияПриемТоваровНаКомиссию">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияРазноситьОплатуОтЭквайрераПоЭквайринговымОперациям">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияРезервированиеЗапасов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетВРазличныхЕдиницахИзмерения">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетВнеоборотныхАктивов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетГТД">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетПоНесколькимНаправлениямДеятельности">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетПоНесколькимПодразделениям">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетПоНесколькимСкладам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетПоПроектам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетПоЯчейкам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетРозничныхПродаж">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяОпцияУчетЦенКонтрагентов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ФункциональнаяУчетВалютныхОпераций">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ЭтоМобильноеПриложение">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Константа.ЭтоОбычноеПриложение">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="ПланВидовХарактеристик.АналитикаДоходовИРасходов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="ПланВидовХарактеристик.ДополнительныеРеквизитыИСведения">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="ПланВидовХарактеристик.НастройкиПользователей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="ПланВидовХарактеристик.ПоказателиОтчетности">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="ПланВидовХарактеристик.РазделыДатЗапретаИзменения">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="ПланСчетов.Управленческий">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрБухгалтерии.Управленческий">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ВнеоборотныеАктивы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ВыполнениеДоговоровОбслуживания">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ВыпускПродукции">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ВыработкаВнеоборотныхАктивов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ГрафикДвиженияЗапасов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДенежныеСредства">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДенежныеСредстваВКассахККМ">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДенежныеСредстваПрогноз">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДоходыИРасходы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДоходыИРасходыКассовыйМетод">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДоходыИРасходыКассовыйМетодЭквайринг">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДоходыИРасходыНераспределенные">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДоходыИРасходыОтложенные">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДоходыИРасходыПоЗаказамПрогноз">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ДоходыИРасходыПрогноз">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗаданияНаРаботу">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗаказыНаПроизводство">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗаказыПокупателей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗаказыПоставщикам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.Закупки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗакупкиДляКУДиР">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.Запасы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗапасыВРемонте">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗапасыКПоступлениюНаСклады">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗапасыКРасходуСоСкладов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗапасыНаСкладах">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗапасыПереданные">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗапасыПереданныеВРемонте">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗапасыПринятые">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.КнигаДоходовРасходовПоЕдиномуНалогу">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.КнигаУчетаДоходовПатент">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.НДФЛДоходы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.НДФЛРасчетыНалоговыхАгентовСБюджетом">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.НачисленияИУдержания">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ОплатаДокументов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ОплатаПлатежнымиКартами">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ОплатаСчетовИЗаказов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ОстаткиАлкогольнойПродукцииЕГАИС">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ПартииТоваров">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ПланыПродаж">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ПлатежныйКалендарь">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ПотребностьВЗапасах">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ПредоставленныеАвтоматическиеСкидки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ПримененныеВычетыПоНДФЛ">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.Продажи">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ПродажиПоДисконтнымКартам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РазмещениеЗаказов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РасчетыПоКредитамИЗаймам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РасчетыПоНалогам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РасчетыПоЭквайрингу">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РасчетыСПерсоналом">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РасчетыСПодотчетниками">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РасчетыСПокупателями">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РасчетыСПоставщиками">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РасчетыСПрочимиКонтрагентами">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.РасчетыСФондамиПоСтраховымВзносам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.СдельныеНаряды">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.СерийныеНомера">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.СтраховыеВзносыДоходы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.СтраховыеВзносыПереданныеВПФР">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.СуммовойУчетВРознице">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.Табель">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ФинансовыйРезультат">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ФинансовыйРезультатПрогноз">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.АналогиНоменклатуры">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.АрхивДанныхРегламентированнойОтчетности">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ВерсииОбъектов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ВерсииПодсистем">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ВидыРесурсовПредприятия">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ВыполнениеПравилРабочегоПроцесса">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ГрафикВыполненияЗаказов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ГрафикОплатыЗаказов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ГрафикПлатежей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ГрафикПогашенияКредитовИЗаймов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ГрафикиРаботы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ГрафикиРаботыРесурсов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ГруппыЗначенийДоступа">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ДанныеОбработанныеВЦентральномУзлеРИБ">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ДанныеПроизводственногоКалендаря">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ДанныеСайта">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ДатыВыполненияИсправленийПоРазделам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ДатыЗапретаИзменения">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ДатыИзмененныхДокументов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ДвоичныеДанныеФайлов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ДокументыСобытийКалендаряОтчетности">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ДокументыФизическихЛиц">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ДополнительныеСведения">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ДополнительныеФайлыРегламентированныхОтчетов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ЗаблокированныеДляПолученияУчетныеЗаписи">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ЗависимостиПравДоступа">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ЗаказыПокупателейССайта">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ЗаполненностьСвойствКатегорий">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ЗначенияГруппДоступа">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ЗначенияГруппДоступаПоУмолчанию">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ЗначенияКБК">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ЗначенияПоказателейОтчетности">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ИдентификаторыСобытий">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ИсключенияПрайсЛистов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ИсторияЗначенийРеквизитовПриЗагрузкеИзКлиентаБанка">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ИсторияРаботыСКлиентомБанка">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ИсторияСостоянийЗаказов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.КалендарныеГрафики">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.КодировкиФайлов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.КодыТоваровПодключаемогоОборудованияOffline">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.КоэффициентДефлятор">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.КурсыВалют">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.МРОТ">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НДФЛИмущественныйВычет">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НДФЛРазмерВычетов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НДФЛСоциальныеВычеты">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НДФЛСтандартныеВычетыНаДетей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НДФЛСтандартныеЛичныеВычеты">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НаборыЗначенийДоступа">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НазначениеДополнительныхОбработок">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НаличиеДублейУКонтрагентов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НаличиеФайлов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НапоминанияПользователя">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НаследованиеНастроекПравОбъектов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НастройкиВариантовОтчетов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НастройкиВариантовОтчетовУНФ">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НастройкиВерсионированияОбъектов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НастройкиВидовКонтактнойИнформации">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НастройкиКомандПечати">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НастройкиОчисткиФайлов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НастройкиПользователей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НастройкиПравОбъектов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НеобрабатываемыеТелефонныеНомера">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НормыВремениРабот">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НумераторПачекПФР">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.Обсуждения">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ОстаткиВзаиморасчетов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ОстаткиТоваров">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ОтклоненияОтГрафиковРаботыРесурсов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ОтчетПоКурсовымРазницам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ОшибкиЗакрытияМесяца">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПакетыИнформацииПриЗапуске">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПараметрыВнеоборотныхАктивов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПлановыеНачисленияИУдержания">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПодчиненныеПользователи">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПользовательскиеМакетыПечати">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПользовательскиеНастройкиДоступаКОбработкам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПраваРолей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПредельнаяВеличинаБазыСтраховыхВзносов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПривязкаПолейОтчетовУНФ">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПрименениеПереводовВПути">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПримененияЕНВД">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПрименяемыеТарифыСтраховыхВзносов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ПротоколыПроверкиДанных">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.РучныеИзмененияГрафиковРаботы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СведенияОФайлах">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СвязиВидовЦенСлужебный">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СерийныеНомераГарантии">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СертификатыШифрования">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СистемыНалогообложенияОрганизаций">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СклоненияПредставленийОбъектов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СкрытыеРегламентированныеОтчеты">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СлужебныйАвтоматическиеСкидки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СобытияКалендаряБухгалтера">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СогласияНаОбработкуПерсональныхДанных">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СоответствиеНоменклатурыЕГАИС">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СоответствияОбъектовСайта">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СоставыГруппПользователей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СостоянияВнеоборотныхАктивов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.Сотрудники">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СтатусыОтправки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СчетчикиВыгрузок">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.СчетчикиПодсказок">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ТаблицыГруппДоступа">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ТарифыСтраховыхВзносов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ТекущиеКадровыеДанныеСотрудников">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.УдалитьЗаполненностьСвойствКатегорий">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.УдалитьОтветственныеЛица">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.УдалитьСоответствиеОрганизацийЕГАИС">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.УдалитьФаксимилеНастройки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.УдалитьХранимыеФайлыВерсий">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.УзлыКорректировкиСтоимостиСписания">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.УправлениеЗапасами">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ФИОФизЛиц">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ФактОплатыДокументов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ФактОплатыЗаказов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ЦеныНоменклатуры">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ЦеныНоменклатурыКонтрагентов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ШаблоныНаименований">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ШаблоныПечатиМашиночитаемыхФорм">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ШаблоныЭВФОтчетовСтатистики">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ШтатноеРасписание">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ШтрихкодыНоменклатуры">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ЭлектронныеПодписи">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ЯндексДоставка">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.АвансовыйОтчетПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.АвтоматическиеСкидки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.АктВыполненныхРаботПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Банки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.БанковскиеСчета">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.БланкиДоговоров">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Бригады">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Валюты">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВариантыДополнительныхОтчетов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВариантыОтчетов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВерсииФайлов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыАлкогольнойПродукции">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыДеятельностиЕНВД">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыДисконтныхКарт">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыДокументовФизическихЛиц">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыДоходовПоСтраховымВзносам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыЗаказНарядов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыЗаказовПокупателей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыКонтактнойИнформации">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыНалогов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыНачисленийИУдержаний">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыОтправляемыхДокументов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыПлатежныхКарт">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыПредпринимательскойДеятельности">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыРабочегоВремени">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыРесурсовПредприятия">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыСкидокНаценок">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыТарифовСтраховыхВзносов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыЦен">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВидыЦенКонтрагентов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВнеоборотныеАктивы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВнешниеПользователи">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ВычетыНДФЛ">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ГрафикиРаботы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ГруппыВнешнихПользователей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ГруппыДоступа">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ГруппыДоступаКонтрагентов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ГруппыПользователей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ДействияРабочегоПроцесса">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Делегирование">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ДисконтныеКарты">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ДоверенностиНалогоплательщика">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ДоговорКредитаИЗаймаПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ДоговорыКонтрагентов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ДоговорыКонтрагентовПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Должности">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ДополнительныеОтчетыИОбработки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ДополнительныеУсловия">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ДрайверыОборудования">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЕдиницыИзмерения">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЗаданиеНаРаботуПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЗадачиКалендаряПодготовкиОтчетности">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЗаказНаПроизводствоПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЗаказПокупателяПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЗаказПоставщикуПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЗаписиКалендаряПодготовкиОтчетности">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЗаписиКалендаряСотрудника">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЗначенияСвойствОбъектов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЗначенияСвойствОбъектовИерархия">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЗоныТарифыДоставки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ИдентификаторыОбъектовМетаданных">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ИнвентаризацияЗапасовПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ИнтервалыДоставки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ИсторияПроверкиИКорректировкиДанныхПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ИсточникиПривлеченияПокупателей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Календари">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КалендариСотрудников">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КалендарьПерсональныхЗадачОтчетности">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КалендарьПодготовкиОтчетности">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Кассы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КассыККМ">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КатегорииНоменклатуры">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КлассификаторАлкогольнойПродукцииЕГАИС">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КлассификаторБанков">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КлассификаторЕдиницИзмерения">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КлассификаторКатегорийНоменклатуры">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КлассификаторКонтактов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КлассификаторОрганизацийЕГАИС">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КлассификаторТНВЭД">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КлючевыеРесурсы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КодыДоходовНДФЛ">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Комиссии">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КомплектыОтчетностиПерсучета">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КонтактныеЛица">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Контрагенты">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КонтрагентыПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КорректировкаПоступленияПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.КорректировкаРеализацииПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЛицензииПоставщиковАлкогольнойПродукции">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЛицензионныеКарточкиТранспортныхСредств">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.НаборыДополнительныхРеквизитовИСведений">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.НаправленияДеятельности">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.НастройкиРМК">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.НастройкиРассылкиСостояниеКомпании">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.НастройкиЯндексДоставки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Номенклатура">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.НоменклатураБухгалтерии">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.НоменклатураПоставщиков">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.НоменклатураПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.НомераГТД">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ОКУН">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ОбщиеДанныеИнформационногоЦентра">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Организации">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ОрганизацииПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ОрганыПФР">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ОрганыФСГС">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ОтчетОРозничныхПродажахПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПапкиФайлов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПараметрыРасчетов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПараметрыРасчетовДоставки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПартииНоменклатуры">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Патенты">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПересортицаЗапасовПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПлатежноеПоручениеПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПодключаемоеОборудование">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Подписи">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Пользователи">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПользовательскиеНастройкиОтчетов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПоставщикиУслугСервиса">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПоступлениеНаСчетПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПравилаОбменаСПодключаемымОборудованиемOffline">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПравилаРабочегоПроцесса">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПрайсЛисты">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПрайсЛистыПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПредопределенныеВариантыОтчетов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПриемИПередачаВРемонтПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПриходнаяНакладнаяПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПричиныОтменыЗаказа">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПрограммыЭлектроннойПодписиИШифрования">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Проекты">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПроизводственныеКалендари">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПрофилиГруппДоступа">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПунктыВыдачиЗаказа">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.РасходДСПланПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.РасходСоСчетаПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.РасходнаяНакладнаяПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.РегистрацииВНалоговомОргане">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.РегламентированныеОтчеты">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.РолиКонтактныхЛиц">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СборкаЗапасовПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СверкаВзаиморасчетовПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Сегменты">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СерийныеНомера">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СертификатыКлючейЭлектроннойПодписиИШифрования">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СкладыСлужбДоставки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СлужбыДоставки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СобытиеПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СоответствияНазначенийПлатежаИРеквизитовПлатежа">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СостоянияЗаказНарядов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СостоянияЗаказовНаПроизводство">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СостоянияЗаказовПокупателей">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СостоянияЗаказовПоставщикам">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СостоянияСобытий">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Сотрудники">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Спецификации">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СпецификацииПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СтавкиНДС">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СтатьиДвиженияДенежныхСредств">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СтраныМира">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СтруктурныеЕдиницы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СценарииПланирования">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СчетНаОплатуПоставщикаПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.СчетНаОплатуПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ТарифныеПланыДоговоровОбслуживания">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Теги">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ТегиОтчетов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ТемыСобытий">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ТипыИнформацииИнформационногоЦентра">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ТорговыеПредложения">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ТорговыеТочки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ТранспортныеСредства">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.УдалитьВидыОбъектовЕГАИС">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.УдалитьПапкиФайловПрисоединенныеУдалитьФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.УсловияПредоставленияСкидокНаценок">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.УслугиСервиса">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.УчетныеЗаписиЭлектроннойПочты">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Файлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ФизическиеЛица">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ФизическиеЛицаПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ХарактеристикиНоменклатуры">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ХарактеристикиНоменклатурыПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ХозяйственныеОперации">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЦеновыеГруппы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ШаблоныДисконтныхКарт">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ШаблоныДокументов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ШаблоныКалькуляций">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ШаблоныМагнитныхКарт">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ШаблоныНаименований">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ШаблоныПечатиОфисныхДокументов">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ШаблоныПечатиОфисныхДокументовПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ШаблоныСерийныхНомеров">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ШаблоныСообщений">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ШаблоныСообщенийПрисоединенныеФайлы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ШаблоныЭтикетокИЦенников">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЭквайринговыеТерминалы">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.ЭтапыРемонта">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Ячейки">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="ПланОбмена.ТоварыИУслуги">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Справочник.Номенклатура">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.НоменклатураБухгалтерии">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullNameInSecondConfiguration="Справочник.НаименованиеБухгалтерии">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Справочник.НаименованиеБухгалтерии.Реквизит.Наиенование">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Справочник.НаименованиеБухгалтерии.Форма.ФормаЭлемента">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Справочник.НаименованиеБухгалтерии.Форма.ФормаСписка">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Справочник.НаименованиеБухгалтерии.Форма.ФормаВыбора">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя">
+			<Properties>
+				<Property name="ВводитсяНаОсновании">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="МодульОбъекта">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя.Реквизит.Курс">
+			<Properties>
+				<Property name="Тип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullNameInSecondConfiguration="Документ.ЗаказПокупателя.Реквизит.ЦеныИзменены">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя.Форма.ФормаДокумента">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя.Форма.ФормаСписка">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя.ТабличнаяЧасть.Запасы.Реквизит.КурсЗакупки">
+			<Properties>
+				<Property name="Тип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя.ТабличнаяЧасть.Запасы.Реквизит.ЦенаВходящаяВалюта">
+			<Properties>
+				<Property name="Тип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя.ТабличнаяЧасть.Запасы.Реквизит.НаценкаВалюта">
+			<Properties>
+				<Property name="Тип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя.ТабличнаяЧасть.Запасы.Реквизит.НаценкаПроценты">
+			<Properties>
+				<Property name="Тип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullNameInSecondConfiguration="Документ.ЗаказПокупателя.ТабличнаяЧасть.Запасы.Реквизит.НаименованиеБухгалтерии">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullName="Документ.РасходДСПлан.Форма.ФормаДокумента">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие">
+			<Properties>
+				<Property name="ВводитсяНаОсновании">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="МодульОбъекта">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="Проведение">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.Форма.ФормаДокумента">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.Форма.ФормаСписка">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.Форма.ФормаВыбора">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.Форма.ФормаСобытия">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.Форма.ФормаЭлектронногоПисьма">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.Форма.ФормаСообщенияSMS">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.Форма.ФормаЗапросЛогисту">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.ТабличнаяЧасть.Запасы.Реквизит.Вендор">
+			<Properties>
+				<Property name="Тип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.ТабличнаяЧасть.Запасы.Реквизит.КурсЗакупки">
+			<Properties>
+				<Property name="Тип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Ресурс.ЦенаВх">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Ресурс.КурсЗакупки">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Ресурс.Количество">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Ресурс.ФлагУстановки">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Ресурс.Примечание">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Измерение.ДокументРегистратор">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Измерение.Номенклатура">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Измерение.Вендор">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Измерение.Дата">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullName="РегистрНакопления.ЗаказыПокупателей">
+			<Properties>
+				<Property name="Синоним">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="ОсновнаяФормаСписка">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+	</Objects>
+</Settings>

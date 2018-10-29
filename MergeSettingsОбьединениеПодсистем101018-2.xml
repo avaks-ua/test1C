@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.3/config/merge/settings" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" platformVersion="8.3.11">
+	<MainConfiguration>
+		<Name>УправлениеНебольшойФирмойДляУкраины</Name>
+		<Version>1.6.6.1</Version>
+		<Vendor>Molenari OU</Vendor>
+	</MainConfiguration>
+	<SecondConfiguration>
+		<Name>УправлениеНебольшойФирмойДляУкраины</Name>
+		<Version>1.6.6.1</Version>
+		<Vendor>Molenari OU</Vendor>
+	</SecondConfiguration>
+	<Parameters>
+		<ConfigurationsRelation>ConfigurationsNotRelated</ConfigurationsRelation>
+		<AllowMainConfigurationObjectDeletion>false</AllowMainConfigurationObjectDeletion>
+		<CopyObjectsMode>false</CopyObjectsMode>
+	</Parameters>
+	<Objects>
+		<Object fullName="Подсистема.CRM">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.МассоваяРассылка">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Константа.ИспользоватьЧатВОбсуждениях">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.ВводЦен">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Обработка.ДокументыПоКонтрагенту">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.МониторЛогиста">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Обработка.ПриемСообщений">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Обработка.РасчетПотребностей1">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.РегистрацияВСистемеВзаимодействияУНФ">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКартинка.КоллекцияСобытий">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКартинка.РазделCRM">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКартинка.СостоянияВключеноВыключено">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.БольшеВозможностейCRM">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.ОткрытьПанельСпаркРиски">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.ОткрытьШаблоныСообщений">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Отчет.СобытияМониторингаСПАРКРиски">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Перечисление.ВариантыВажности">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрНакопления.ЗаказыПокупателей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.АнализЦенВх">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.НастройкиВидовКонтактнойИнформации">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ОстаткиВзаиморасчетов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ИсточникиПривлеченияПокупателей">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.КонтактныеЛица">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.НоменклатураБухгалтерии">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ПравилаРабочегоПроцесса">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.Сегменты">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.ШаблоныПечатиОфисныхДокументов">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.CRM.Подсистема.CRMПодраздел">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗаданиеНаРаботу">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.Событие">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.ОткрытьРабочееМестоКалендаря">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ОтветыЛогиста">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Справочник.Контрагенты">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.CRM.Подсистема.ЗаказыИСчета">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗаказПокупателя">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Документ.СчетНаОплату">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.РасчетПотребностей1">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.CRM.Подсистема.События">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+						<Item Name="Документ.Событие">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.РасчетПотребностей1">
+							<MergeRule>GetFromSecondConfiguration</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.CRM.Подсистема.ТоварыИУслуги">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>GetFromSecondConfiguration</MergeRule>
+					<Content>
+						<Item Name="Документ.ЗапросЦенВходящих">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Обработка.РасчетПотребностей1">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="ОбщаяКоманда.ПрайсЛисты">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.АнализЦенВх">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="РегистрСведений.ОтветыЛогиста">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+						<Item Name="Справочник.Номенклатура">
+							<MergeRule>DoNotMerge</MergeRule>
+						</Item>
+					</Content>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.ЗапасыИЗакупки">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.ЗапасыИЗакупки.Подсистема.Закупки">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.ЗапасыИЗакупки.Подсистема.РасчетыСПоставщиками">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.ЗапасыИЗакупки.Подсистема.ЗапасыИСклад">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.ЗапасыИЗакупки.Подсистема.ТорговыеПредложения">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.ЗапасыИЗакупки.Подсистема.ТоварыИУслуги">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.ЗапасыИЗакупки.Подсистема.Цены">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.Компания.Подсистема.Компания">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.МаркетингИПродажи">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.МаркетингИПродажи.Подсистема.Продажи">
+			<Properties>
+				<Property name="КомандныйИнтерфейс">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="Состав">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.МаркетингИПродажи.Подсистема.Маркетинг">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.МаркетингИПродажи.Подсистема.ТоварыИУслуги">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Подсистема.НСИ">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Роль.АдминистраторСистемы">
+			<Properties>
+				<Property name="Права">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Роль.БазовыеПрава">
+			<Properties>
+				<Property name="Права">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="ОбщийМодуль.ГрупповоеИзменениеСтрокКлиент">
+			<Properties>
+				<Property name="Модуль">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="ОбщийМодуль.ГрупповоеИзменениеСтрокКлиентСервер">
+			<Properties>
+				<Property name="Модуль">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="ОбщийМодуль.ГрупповоеИзменениеСтрокСервер">
+			<Properties>
+				<Property name="Модуль">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullNameInSecondConfiguration="ОбщийМодуль.КалендарныеГрафикиСлужебныйВМоделиСервиса1">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullName="ПланОбмена.АвтономнаяРабота">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="ПланОбмена.ТоварыИУслуги">
+			<Properties>
+				<Property name="Состав">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullNameInSecondConfiguration="Справочник.НаименованиеБухгалтерии">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Справочник.НаименованиеБухгалтерии.Реквизит.Наиенование">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Справочник.НаименованиеБухгалтерии.Форма.ФормаЭлемента">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Справочник.НаименованиеБухгалтерии.Форма.ФормаСписка">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Справочник.НаименованиеБухгалтерии.Форма.ФормаВыбора">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя">
+			<Properties>
+				<Property name="ВводитсяНаОсновании">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="МодульОбъекта">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя.Реквизит.Курс">
+			<Properties>
+				<Property name="Тип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullNameInSecondConfiguration="Документ.ЗаказПокупателя.Реквизит.ЦеныИзменены">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя.Форма.ФормаДокумента">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя.Форма.ФормаСписка">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя.ТабличнаяЧасть.Запасы.Реквизит.КурсЗакупки">
+			<Properties>
+				<Property name="Тип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя.ТабличнаяЧасть.Запасы.Реквизит.ЦенаВходящаяВалюта">
+			<Properties>
+				<Property name="Тип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя.ТабличнаяЧасть.Запасы.Реквизит.НаценкаВалюта">
+			<Properties>
+				<Property name="Тип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.ЗаказПокупателя.ТабличнаяЧасть.Запасы.Реквизит.НаценкаПроценты">
+			<Properties>
+				<Property name="Тип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullNameInSecondConfiguration="Документ.ЗаказПокупателя.ТабличнаяЧасть.Запасы.Реквизит.НаименованиеБухгалтерии">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullName="Документ.РасходДСПлан.Форма.ФормаДокумента">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие">
+			<Properties>
+				<Property name="ВводитсяНаОсновании">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="МодульОбъекта">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="Проведение">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.Форма.ФормаДокумента">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.Форма.ФормаСписка">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.Форма.ФормаВыбора">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.Форма.ФормаСобытия">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.Форма.ФормаЭлектронногоПисьма">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.Форма.ФормаСообщенияSMS">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.Форма.ФормаЗапросЛогисту">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.ТабличнаяЧасть.Запасы.Реквизит.Вендор">
+			<Properties>
+				<Property name="Тип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Документ.Событие.ТабличнаяЧасть.Запасы.Реквизит.КурсЗакупки">
+			<Properties>
+				<Property name="Тип">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullName="Обработка.РасчетПотребностей.Форма.Форма">
+			<Properties>
+				<Property name="Форма">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+		<Object fullNameInSecondConfiguration="Обработка.МониторЛогиста">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Обработка.МониторЛогиста.Форма.Форма">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Обработка.МониторЛогиста.Форма.ФормаНастройка">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Обработка.МониторЛогиста.Макет.СхемаКомпоновкиДанных">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Обработка.ВводЦен">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Обработка.ВводЦен.Форма.Форма">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Обработка.ВводЦен.Форма.ФормаНастройка">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Обработка.ВводЦен.Макет.СхемаКомпоновкиДанных">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Обработка.ПриемСообщений">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Обработка.ПриемСообщений.Реквизит.ДатаПоследнегоСообщения">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Обработка.ПриемСообщений.Форма.Форма">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="Обработка.ПриемСообщений.Форма.Форма1">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Ресурс.ЦенаВх">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Ресурс.КурсЗакупки">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Ресурс.Количество">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Ресурс.ФлагУстановки">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Ресурс.Примечание">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Измерение.ДокументРегистратор">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Измерение.Номенклатура">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Измерение.Вендор">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullNameInSecondConfiguration="РегистрСведений.ВходящаяЦена.Измерение.Дата">
+			<MergeRule>DoNotMerge</MergeRule>
+		</Object>
+		<Object fullName="РегистрНакопления.ЗаказыПокупателей">
+			<Properties>
+				<Property name="Синоним">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+				<Property name="ОсновнаяФормаСписка">
+					<MergeRule>DoNotMerge</MergeRule>
+				</Property>
+			</Properties>
+		</Object>
+	</Objects>
+</Settings>
